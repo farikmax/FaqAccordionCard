@@ -63,6 +63,9 @@ body {
 			border-bottom: 1px solid $LightGrayishBlue;
 			padding-top: 15px;
 			cursor: pointer;
+			&:hover &-title {
+				color: $SoftRed;
+			}
 
 			&-title {
 				position: relative;
@@ -70,6 +73,7 @@ body {
 				font-weight: 400;
 				color: $VeryDarkGrayishBlue;
 				margin-bottom: 15px;
+				transition: all 0.2s ease-in-out;
 			}
 
 			&-descr {
@@ -91,4 +95,16 @@ body {
 			}
 		}
 	}
+}
+
+.active > .content__accordion_item-descr {
+	display: block;
+}
+
+.active .content__accordion_item-arrow {
+	transform: rotate(180deg);
+}
+
+.active .content__accordion_item-title {
+	font-weight: 700;
 }
